@@ -106,15 +106,6 @@
     .header {
       padding: 0 2rem;
     }
-    .home .slide {
-      padding: 2rem 5%;
-    }
-    .home .slide .content {
-      width: 50rem;
-    }
-    .home .slide .content h3 {
-      font-size: 4rem;
-    }
   }
   
   @media (max-width: 768px) {
@@ -144,15 +135,6 @@
     .header .navbar a {
       display: block;
       font-size: 2rem;
-    }
-    .about {
-      gap: 3rem;
-    }
-    .about .image {
-      margin-top: 5rem;
-    }
-    .about .content .title {
-      font-size: 3rem;
     }
   }
   
