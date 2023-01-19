@@ -1,0 +1,86 @@
+h1{
+  color:#f00;
+}
+
+.team .box-container {
+    margin-left: 5rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+  }
+  
+  .team .box-container .box {
+    width: 60%;
+    height: 35rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .team .box-container .box:hover .content {
+    transition: 0.3s;
+    left: -100%;
+  }
+  
+  .team .box-container .box:hover .share {
+    transition: 0.5s;
+    left: 0;
+  }
+  
+
+
+#box-1{
+    background-image: url(../images/team-1.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#box-2{
+  background-image: url(../images/team-2.jpg);
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#box-3{
+  background-image: url(../images/team-3.jpg);
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
+  .team .box-container .box .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgb(3, 3, 3);
+    padding: 1rem 2rem;
+  }
+  
+  .team .box-container .box .content span {
+    font-size: 1.7rem;
+    color: white;
+  }
+  
+  .team .box-container .box .content h3 {
+    font-size: 2rem;
+    color: #f00;
+  }
+  
+  .team .box-container .box .share {
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    background: #f00;
+    padding: 1.5rem 1rem;
+  }
+  
+  .team .box-container .box .share a {
+    font-size: 2rem;
+    color: #000;
+    margin: 0 1rem;
+  }
+  
+  .team .box-container .box .share a:hover {
+    color: white;
+  }
