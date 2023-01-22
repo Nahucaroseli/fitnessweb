@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxPayPalModule } from 'ngx-paypal/public_api';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,9 +16,11 @@ import { TeamSectionComponent } from './team-section/team-section.component';
     HomeSectionComponent,
     PricingComponent,
     TeamSectionComponent
+
   ],
   imports: [
     BrowserModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,12 +2,14 @@
 h1{
     color: #f00;
 }
-.pricing {
-    display: grid;
+
+:host{
+ display: grid;
     -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
     grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
     gap: 1rem;
-  }
+
+}
   .btn {
     margin-top: 1rem;
     display: inline-block;
