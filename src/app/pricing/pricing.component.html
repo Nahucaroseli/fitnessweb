@@ -7,7 +7,7 @@
        <div class="list" *ngFor="let desc of subs.description">
         <p> <i class="fas fa-check" *ngIf="desc != 'diet plans' && desc != 'overall results' && subs.price < 90 || subs.price >30 "></i>{{desc}}</p>
        </div>
-       <a class="btn">get started</a>
+       <a class="btn" (click)="subscribe(subs)">get started</a>
     </div>
 </section>
 

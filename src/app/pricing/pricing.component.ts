@@ -1,5 +1,6 @@
 import { Component, ElementRef, NgModule, ViewChild } from '@angular/core';
 import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
+import { SubscriptionService } from '../subscription.service';
 import { Subscription } from './Subscription';
 
 
@@ -14,8 +15,7 @@ import { Subscription } from './Subscription';
 
 export class PricingComponent {
 
-  public product:any;
-  constructor(){
+  constructor(private sub:SubscriptionService){
 
   }
 
@@ -49,12 +49,13 @@ export class PricingComponent {
     }
     ]
 
-    this.product = {
-      name:"",
-      price:"",
-    }
-    
+  
     
     
   }
+
+  subscribe(sub:any){
+    this.sub.Subs(sub);
+  }
+
 }

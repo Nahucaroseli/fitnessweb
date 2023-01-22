@@ -3,6 +3,11 @@ body{
     background: black;
     margin: 0;
 }
+
+*{
+    font-family: 'Nunito', sans-serif;
+}
+
 html {
     scroll-behavior: smooth;
 }

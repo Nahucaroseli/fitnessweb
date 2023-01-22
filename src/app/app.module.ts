@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { HomeSectionComponent } from './home-section/home-section.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { TeamSectionComponent } from './team-section/team-section.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -15,11 +17,13 @@ import { TeamSectionComponent } from './team-section/team-section.component';
     HeaderComponent,
     HomeSectionComponent,
     PricingComponent,
-    TeamSectionComponent
+    TeamSectionComponent,
+    ProfileComponent
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
 
   ],
   providers: [],
