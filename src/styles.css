@@ -12,3 +12,12 @@ html {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar{
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: red;
+    border-radius: 10px;
+}
+
