@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {Directive, HostBinding, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,17 +8,15 @@ import {Directive, HostBinding, HostListener} from '@angular/core';
 export class HeaderComponent {
 
  
-@Directive({
-  selector: '[appHamburgerToggle]'
-})
+    menuVariable:boolean = false;
+    menuIcon:boolean = false
 
-  @HostBinding('class.is-active')
-  private isActive = false;
+    toggleMenu(){
+      this.menuVariable =! this.menuVariable;
+      this.menuIcon =! this.menuIcon;
+    }
 
-  @HostListener('click')
-  toggleActive(): void {
-    this.isActive = !this.isActive;
-  }
+ 
 }
 
 

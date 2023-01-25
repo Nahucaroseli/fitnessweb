@@ -95,6 +95,7 @@
   .header .navbar a:hover {
     background: #f00;
   }
+
   
   #menu-btn {
     font-size: 2rem;
@@ -121,6 +122,7 @@
     }
     .header .navbar {
       position: absolute;
+      height: 35rem;
       top: 99%;
       left: 0;
       right: 0;
@@ -134,10 +136,6 @@
     }
     .header .navbar a {
       display: block;
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
-  
-  @media (max-width: 450px) {
-
-  }  
