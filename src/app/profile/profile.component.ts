@@ -8,8 +8,10 @@ import { SubscriptionService } from '../subscription.service';
 })
 export class ProfileComponent {
   public sub: any
+  public flag:boolean
   constructor(private subscription:SubscriptionService){
     this.sub = null;
+    this.flag= this.subscription.isSubscribed
   }
 
 
@@ -17,5 +19,6 @@ export class ProfileComponent {
     this.subscription.getSubscription().subscribe(res=>{
       this.sub = res;
     })
+
   }
 }

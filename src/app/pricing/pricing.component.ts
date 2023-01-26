@@ -16,11 +16,12 @@ import { Subscription } from './Subscription';
 export class PricingComponent {
 
   constructor(private sub:SubscriptionService){
-
+  this.clicked = false;
   }
 
 
   subscription: Subscription[] = []
+  clicked:boolean
 
   ngOnInit():void {
 
@@ -56,6 +57,15 @@ export class PricingComponent {
 
   subscribe(sub:any){
     this.sub.Subs(sub);
+    this.clicked = true;
+  }
+
+  setButtonState(element,text,flag){
+    if(flag==true){
+       element.textContent = text;
+    }
+   
+ 
   }
 
 }

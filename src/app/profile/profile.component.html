@@ -2,12 +2,16 @@
     <h1>Your subscriptions</h1>
     <section class="pricing" id="pricing" >
 
-        <div class="plan basic" *ngIf="sub.price != 0 ">
+        <div class="plan basic" *ngIf="flag">
             <h3>{{sub.name}}</h3>
             <div class="price"><span>$</span>{{sub.price}}<span>/mo</span></div>
            <div class="list" *ngFor="let desc of sub.description">
             <p> <i class="fas fa-check" *ngIf="desc != 'diet plans' && desc != 'overall results' && sub.price < 90 || sub.price >30 "></i>{{desc}}</p>
            </div>
+        </div>
+        <div class="plan basic" *ngIf="!flag">
+            <h3>You have no subscriptions</h3>
+            <a class="btn" routerLink="/home">get started</a>
         </div>
     </section>
 </div>

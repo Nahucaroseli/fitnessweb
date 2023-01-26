@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class SubscriptionService {
   public subscription: any;
+  public isSubscribed:boolean = false;
   public productsub = new BehaviorSubject<any>([]);
   constructor() { }
 
@@ -17,6 +18,7 @@ export class SubscriptionService {
 
   Subs(sub:any){
     this.subscription = sub
+    this.isSubscribed = true;
     this.productsub.next(this.subscription)
   }
 }
