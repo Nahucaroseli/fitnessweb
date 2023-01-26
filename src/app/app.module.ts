@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgxPayPalModule } from 'ngx-paypal/public_api';
 
+import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeSectionComponent } from './home-section/home-section.component';
@@ -10,6 +9,9 @@ import { TeamSectionComponent } from './team-section/team-section.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AppRoutingModule } from './app-routing.module';
 
+
+//external
+import { NgxPayPalModule } from 'ngx-paypal';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
+    NgxPayPalModule,
     AppRoutingModule
 
   ],

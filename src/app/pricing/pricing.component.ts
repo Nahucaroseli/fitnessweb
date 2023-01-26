@@ -1,5 +1,4 @@
 import { Component, ElementRef, NgModule, ViewChild } from '@angular/core';
-import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
 import { SubscriptionService } from '../subscription.service';
 import { Subscription } from './Subscription';
 
