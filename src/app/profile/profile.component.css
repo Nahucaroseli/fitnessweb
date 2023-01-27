@@ -1,26 +1,57 @@
 *{
-    color: white
+    color: white;
+    font-family: 'Nunito', sans-serif;
 }
 
 
 .profile-section{
     margin-top: 5rem;
     background-color: rgb(27, 27, 27);
-    text-align: center;
+    width: 25%;
+    height: 40rem;
+    border-bottom-right-radius: 5rem;
+
 }
 
+
+.profile-section .user-icon{
+  position: relative;
+  left: 35%;
+  top: 1%;
+  background-image: url(../images/pic-4.png);
+  background-position: center;
+  background-size: contain;
+  border-radius: 5rem;
+  width: 100px;
+  height: 100px;
+}
+
+
+.profile-section h2{
+  position: relative;
+  left: 36%;
+  font-size: 2rem;
+}
+
+
+
+.profile-section ul li{
+  font-size: 1.3rem;
+  margin-top: 5rem;
+  width: 0;
+  list-style-type: none;
+}
+
+.profile-section ul li:hover{
+ cursor: pointer;
+ color: #f00;
+transform: scale(1.1);
+}
 
 h1{
     color: #f00;
 }
 
-:host{
- display: grid;
-    -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
-    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
-    gap: 1rem;
-
-}
   .btn {
     margin-top: 1rem;
     display: inline-block;
@@ -34,14 +65,42 @@ h1{
     font-size: 1.7rem;
   }
 
+
+  .user-info{
+    position: absolute;
+    height: 10rem;
+    width: 50%;
+    top: 10%;
+    left: 30%;
+
+  }
+
+  .info{
+    background-color: rgb(27, 27, 27);
+    height: 10rem;
+    width: 50%;
+  }
+
+  .info h1{
+    color: white;
+  }
+
+
   .sub-section{
+    top: 35%;
+    position: absolute;
+    left: 30%;    
     margin-top: 5rem;
-    text-align: center;
   }
   
   .btn:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+  }
+
+  .pricing{
+    display: flex;
+    flex-direction: row;
   }
   
   .pricing .information span {
@@ -61,6 +120,10 @@ h1{
     font-size: 1.4rem;
     color: #aaa;
   }
+
+  .checkout-button{
+    width: 20%;
+  }
   
   .pricing .information p i {
     padding-right: 1rem;
@@ -70,11 +133,22 @@ h1{
   .pricing .plan {
     text-align: center;
     padding: 2rem;
+
+  }
+
+  .pricing .plan .paypal-button{
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    width: 10rem;
   }
   
   .pricing .plan.basic {
     background: linear-gradient(130deg, #111 93%, transparent 90%);
+    width: 50rem;
+    text-align: left;
   }
+
   
   .pricing .plan h3 {
     font-size: 2rem;

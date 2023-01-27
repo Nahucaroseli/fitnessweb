@@ -11,21 +11,18 @@ export class ProfileComponent {
   public sub: any
   public flag:boolean
   public payPalConfig ? : IPayPalConfig;
-  checkout:boolean
+  checkout:boolean;
   constructor(private subscription:SubscriptionService){
     this.sub = null;
-    this.flag= this.subscription.isSubscribed
+    this.flag= this.subscription.isSubscribed;
     this.checkout = false;
   }
-
 
   ngOnInit(){
     this.initConfig();
     this.subscription.getSubscription().subscribe(res=>{
       this.sub = res;
-
     })
-
   }
 
   getSub(){
@@ -37,11 +34,11 @@ export class ProfileComponent {
       unit_amount:{value:this.sub.price, currency_code:'USD'}
     }
     items.push(item);
-    this.checkout = true;
     return items;
   }
 
   private initConfig(): void {
+    
     this.payPalConfig = {
         currency: 'USD',
         clientId: 'Ab8V5nQMmytfOUFb8GM2njDYTIV-tojPlsaLBSy-mZkQDkvfYMH4BWVeiMlcAw6xC5tkH1pQywEgb31X',
@@ -66,7 +63,9 @@ export class ProfileComponent {
         },
         style: {
             label: 'paypal',
-            layout: 'vertical'
+            layout: 'horizontal',
+
+            
         },
         onApprove: (data, actions) => {
             console.log('onApprove - transaction was approved, but not authorized', data, actions);
@@ -74,10 +73,12 @@ export class ProfileComponent {
                 console.log('onApprove - you can get full order details inside onApprove: ', details);
             });
 
+
         },
         onClientAuthorization: (data) => {
             console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
-
+            this.checkout = true;
+            console.log(this.checkout)
         },
         onCancel: (data, actions) => {
             console.log('OnCancel', data, actions);

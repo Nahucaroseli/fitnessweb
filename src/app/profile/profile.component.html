@@ -1,15 +1,37 @@
+
+<div class="profile-section">
+
+    <div class="user-icon"></div>
+    <h2>Emily</h2>
+    <ul>
+        <li>Subscriptions</li>
+        <li>Routines</li>
+        <li>Trainers</li>
+        <li style="width: 25%;">Log out</li>
+    </ul>
+</div>
+<div class="user-info">
+    <h1>About</h1>
+    <div class="info">
+    </div>
+</div>
+
+
+
 <div class="sub-section">
     <h1>Your subscriptions</h1>
-    <section class="pricing" id="pricing" >
+    <section class="pricing" id="pricing">
 
         <div class="plan basic" *ngIf="flag">
             <h3>{{sub.name}}</h3>
             <div class="price"><span>$</span>{{sub.price}}<span>/mo</span></div>
-            <div class="list" *ngFor="let desc of sub.description">
-                <p> <i class="fas fa-check" *ngIf="desc != 'diet plans' && desc != 'overall results' && sub.price < 90 || sub.price >30 "></i>{{desc}}</p>
-           </div>
+            <div class="paypal-button" *ngIf="!checkout">
+                <h3>Checkout</h3>
+                <ngx-paypal [config]="payPalConfig" class="checkout-button"></ngx-paypal>
+            </div>
+
         </div>      
-            <ngx-paypal [config]="payPalConfig" *ngIf="flag"></ngx-paypal>
+            
         <div class="plan basic" *ngIf="!flag">
             <h3>You have no subscriptions</h3>
             <a class="btn" routerLink="/home">get started</a>
