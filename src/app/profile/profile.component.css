@@ -11,6 +11,20 @@
     height: 40rem;
     border-bottom-right-radius: 5rem;
 
+
+}
+
+#menu-btn{
+  font-size: 2rem;
+  height: 2rem;
+  width: 2rem;
+  padding: .2rem;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 22%;
+  right: 5%;
+  display: none;
 }
 
 
@@ -100,7 +114,6 @@ h1{
 
   .pricing{
     display: flex;
-    flex-direction: row;
   }
   
   .pricing .information span {
@@ -177,3 +190,81 @@ h1{
     padding-right: 1rem;
     color: #f00;
   }
+
+
+  @media screen and (max-width:800px) {
+
+    .profile-section{
+      position: relative;
+      width: 100%;
+      left:100%;
+      z-index: 1;
+      transition: .3s ease-in;
+    }
+
+    .profile-section.is-active{
+      left: 0%;
+    }
+
+    .profile-section .user-icon{
+      top: 7%;
+    }
+
+    .profile-section h2{
+      top: 5%;
+    }
+
+    .user-info h1{
+      font-size: 1.5rem;
+    }
+
+    .user-info{
+      top: 20%;
+      left: 10%;
+    }
+
+    .user-info .info{
+      width: 20rem;
+    }
+
+    .sub-section{
+      top: 50%;
+      left: 10%;
+    }
+
+    .sub-section h1{
+        font-size: 1.5rem;
+    }
+
+    .pricing{
+      flex-direction: column;
+    }
+
+    .pricing .plan.basic{
+      width: 20rem;
+    }
+
+    .pricing .plan .paypal-button{
+      position: relative;
+      left: 0;
+    } 
+
+    #menu-btn{
+      display: inline-block;
+      z-index: 2;
+
+    }
+    #menu-btn.fa-times {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+
+
+    .pricing .plan h3 {
+      font-size: 1.5rem;
+    }
+    
+
+  }
+
+

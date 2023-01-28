@@ -12,6 +12,8 @@ export class ProfileComponent {
   public flag:boolean
   public payPalConfig ? : IPayPalConfig;
   checkout:boolean;
+  menuVar:boolean = false;
+  menuicon:boolean = false;
   constructor(private subscription:SubscriptionService){
     this.sub = null;
     this.flag= this.subscription.isSubscribed;
@@ -23,6 +25,11 @@ export class ProfileComponent {
     this.subscription.getSubscription().subscribe(res=>{
       this.sub = res;
     })
+  }
+
+  toggleUserMenu(){
+    this.menuVar =! this.menuVar;
+    this.menuicon =! this.menuicon;
   }
 
   getSub(){
