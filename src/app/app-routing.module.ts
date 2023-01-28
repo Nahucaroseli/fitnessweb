@@ -8,6 +8,7 @@ import { HomeSectionComponent } from './home-section/home-section.component';
 
 const routes : Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
+  {path:'home/pricing',component:HomeSectionComponent},
   {path:'home',component:HomeSectionComponent},
   {path:'profile',component:ProfileComponent}
 

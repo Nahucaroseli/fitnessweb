@@ -15,7 +15,7 @@ export class ProfileComponent {
   constructor(private subscription:SubscriptionService){
     this.sub = null;
     this.flag= this.subscription.isSubscribed;
-    this.checkout = false;
+    this.checkout = this.subscription.isPaid;
   }
 
   ngOnInit(){
@@ -32,6 +32,7 @@ export class ProfileComponent {
       name: this.sub.name,
       quantity:'1',
       unit_amount:{value:this.sub.price, currency_code:'USD'}
+
     }
     items.push(item);
     return items;
@@ -72,13 +73,11 @@ export class ProfileComponent {
             actions.order.get().then(details => {
                 console.log('onApprove - you can get full order details inside onApprove: ', details);
             });
-
+            this.subscription.isPaid= true;
 
         },
         onClientAuthorization: (data) => {
             console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
-            this.checkout = true;
-            console.log(this.checkout)
         },
         onCancel: (data, actions) => {
             console.log('OnCancel', data, actions);
