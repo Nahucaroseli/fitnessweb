@@ -4,9 +4,8 @@ h1{
 }
 
 :host{
- display: grid;
-    -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
-    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    display: flex;
+    width: 100%;
     gap: 1rem;
 
 }
@@ -58,6 +57,7 @@ h1{
   
   .pricing .plan.basic {
     background: linear-gradient(130deg, #111 93%, transparent 90%);
+    width: 17.5rem;
   }
   
   .pricing .plan h3 {
@@ -86,4 +86,25 @@ h1{
   .pricing .plan .list p i {
     padding-right: 1rem;
     color: #f00;
+  }
+
+  @media screen and (max-width:800px) {
+
+    :host{
+      flex-direction: column;
+    }
+
+    .pricing .plan.basic{
+      width: 90%;
+    }
+    
+  }
+
+
+  @media screen and (max-width:1100px) {
+
+    :host{
+      flex-wrap: wrap;
+    }
+    
   }

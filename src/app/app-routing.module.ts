@@ -4,11 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HomeSectionComponent } from './home-section/home-section.component';
+import { PricingComponent } from './pricing/pricing.component';
 
 
 const routes : Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
-  {path:'home/pricing',component:HomeSectionComponent},
   {path:'home',component:HomeSectionComponent},
   {path:'profile',component:ProfileComponent}
 

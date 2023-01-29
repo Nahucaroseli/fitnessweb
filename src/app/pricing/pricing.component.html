@@ -5,7 +5,7 @@
         <h3>{{subs.name}}</h3>
         <div class="price"><span>$</span>{{subs.price}}<span>/mo</span></div>
        <div class="list" *ngFor="let desc of subs.description">
-        <p> <i class="fas fa-check" *ngIf="desc != 'diet plans' && desc != 'overall results' && subs.price < 90 || subs.price >30 "></i>{{desc}}</p>
+        <p> <i class="fas fa-check"></i>{{desc}}</p>
        </div>
        <a class="btn" (click)="subscribe(subs)" (click)="setButtonState($event.target,'subscribed',clicked)">get started</a>
     </div>

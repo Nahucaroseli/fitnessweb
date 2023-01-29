@@ -26,8 +26,27 @@ export class PricingComponent {
 
     this.subscription = [
       {
-        name:'Basic Plan',
-        price: 30,
+        name:'Basic',
+        price: 20,
+        description: [
+          "personal training",
+          "cardio exercise",
+          "weight lifting"
+        ]
+    },
+    {
+      name:'Standard',
+        price: 50,
+        description: [
+          "personal training",
+          "cardio exercise",
+          "weight lifting",
+          "diet plans"
+        ]
+    },
+    {
+      name:'Plus',
+        price: 75,
         description: [
           "personal training",
           "cardio exercise",
@@ -37,14 +56,15 @@ export class PricingComponent {
         ]
     },
     {
-      name:'Premium Plan',
+      name:'Pro',
         price: 90,
         description: [
           "personal training",
           "cardio exercise",
           "weight lifting",
           "diet plans",
-          "overall results"
+          "overall results",
+          "protein powder"
         ]
     }
     ]
