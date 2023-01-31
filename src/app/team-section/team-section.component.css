@@ -12,8 +12,8 @@ h1{
   }
   
   .team .box-container .box {
-    width: 75%;
-    height: 35rem;
+    width: 74.5%;
+    height: 26.7rem;
     overflow: hidden;
     position: relative;
   }
@@ -31,21 +31,21 @@ h1{
 
 
 #box-1{
+  border-radius: 5rem;
     background-image: url(../images/team-1.jpg);
-    background-size:cover;
-    background-position: center;
+    background-size:contain;
     background-repeat: no-repeat;
 }
 #box-2{
+  border-radius: 5rem;
   background-image: url(../images/team-2.jpg);
-  background-size:cover;
-  background-position: center;
+  background-size:contain;
   background-repeat: no-repeat;
 }
 #box-3{
+  border-radius: 5rem;
   background-image: url(../images/team-3.jpg);
-  background-size:cover;
-  background-position: center;
+  background-size:contain;
   background-repeat: no-repeat;
 }
   
@@ -68,6 +68,7 @@ h1{
   }
   
   .team .box-container .box .share {
+    border-top-right-radius: 3rem;
     position: absolute;
     bottom: 0;
     left: -100%;
