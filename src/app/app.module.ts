@@ -12,6 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 //external
 import { NgxPayPalModule } from 'ngx-paypal';
+import { RoutinesComponent } from './profile/routines/routines.component';
+import { TrainersComponent } from './profile/trainers/trainers.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { NgxPayPalModule } from 'ngx-paypal';
     HomeSectionComponent,
     PricingComponent,
     TeamSectionComponent,
-    ProfileComponent
+    ProfileComponent,
+    RoutinesComponent,
+    TrainersComponent
 
   ],
   imports: [

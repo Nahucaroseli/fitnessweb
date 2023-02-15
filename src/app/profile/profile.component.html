@@ -4,9 +4,9 @@
     <div class="user-icon" ></div>
     <h2>Emily</h2>
     <ul>
-        <li>Subscriptions</li>
-        <li>Routines</li>
-        <li>Trainers</li>
+        <li (click)="showComponent('subscriptions')">Subscriptions</li>
+        <li (click)="showComponent('routines')">Routines</li>
+        <li (click)="showComponent('trainers')">Trainers</li>
         <li style="width: 25%;">Log out</li>
     </ul>
 </div>
@@ -19,8 +19,11 @@
 
 
 <div class="sub-section">
-    <h1>Your subscriptions</h1>
-    <section class="pricing" id="pricing">
+    <div *ngComponentOutlet="childrenComponent">
+
+    </div>
+    <h1 *ngIf="childrenComponent ==='subscriptions'">Your Subscriptions</h1>
+    <section class="pricing" id="pricing" *ngIf="childrenComponent ==='subscriptions'">
 
         <div class="plan basic" *ngIf="flag">
             <h3>{{sub.name}}</h3>

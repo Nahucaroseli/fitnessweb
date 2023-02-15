@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
 import { SubscriptionService } from '../subscription.service';
+import { RoutinesComponent } from './routines/routines.component';
+import { TrainersComponent } from './trainers/trainers.component';
 
 @Component({
   selector: 'app-profile',
@@ -10,6 +12,7 @@ import { SubscriptionService } from '../subscription.service';
 export class ProfileComponent {
   public sub: any
   public flag:boolean
+  public childrenComponent:any = 'subscriptions';
   public payPalConfig ? : IPayPalConfig;
   checkout:boolean;
   menuVar:boolean = false;
@@ -30,6 +33,16 @@ export class ProfileComponent {
   toggleUserMenu(){
     this.menuVar =! this.menuVar;
     this.menuicon =! this.menuicon;
+  }
+
+  showComponent(value:any){
+    if(value === 'routines'){
+        this.childrenComponent = RoutinesComponent;
+    }else if(value === 'trainers'){
+      this.childrenComponent = TrainersComponent;
+    }else{
+      this.childrenComponent = 'subscriptions';
+    }
   }
 
   getSub(){
