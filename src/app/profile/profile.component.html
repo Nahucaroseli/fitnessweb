@@ -27,12 +27,18 @@
 
         <div class="plan basic" *ngIf="flag">
             <h3>{{sub.name}}</h3>
-            <div class="price"><span>$</span>{{sub.price}}<span>/mo</span></div>
+            <div class="price"><span>$</span>{{sub.price}}</div>
             <div class="paypal-button" *ngIf="!checkout">
                 <h3>Checkout</h3>
                 <ngx-paypal [config]="payPalConfig" class="checkout-button"></ngx-paypal>
             </div>
-
+            <p id="demoaccount">
+                demoaccount32@gmail.com
+               
+            </p>
+            <p id="demoaccount">
+                demoaccount123
+            </p>
         </div>      
             
         <div class="plan basic" *ngIf="!flag">
